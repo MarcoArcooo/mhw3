@@ -205,11 +205,8 @@ function generaColore(event){
     const richiesta = 'https://www.thecolorapi.com/id?'+randomRGB;
 
     fetch(richiesta)
-    .then(onColor)
+    .then(onSucc,onErr)
     .then(onJsonColor);
-}
-function onColor(response){
-    return response.json();
 }
 
 function onJsonColor(json){
